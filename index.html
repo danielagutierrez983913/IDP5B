@@ -1,0 +1,267 @@
+<div id="remindme">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+#remindme {
+  --teal:#087f7d;
+  --dark:#145653;
+  --coral:#ef8c75;
+  --sage:#a9b99b;
+  --cream:#fbf8ef;
+  font-family:'Poppins',sans-serif;
+  color:var(--dark);
+  background:var(--cream);
+  overflow:hidden;
+  border-radius:20px;
+}
+#remindme * {box-sizing:border-box}
+#remindme section {padding:65px 7%; scroll-margin-top:20px}
+#remindme h1 {font-size:clamp(38px,6vw,68px);line-height:1.08;margin:15px 0;color:var(--dark)}
+#remindme h2 {font-size:clamp(27px,4vw,40px);text-align:center;margin:0 0 15px}
+#remindme p {line-height:1.8}
+#remindme .eyebrow {color:var(--teal);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+#remindme .sub {text-align:center;max-width:650px;margin:0 auto 35px;color:#58716b}
+#remindme .btn {
+ display:inline-block;background:var(--teal);color:white;
+ padding:14px 25px;border-radius:30px;text-decoration:none;
+ font-weight:600;transition:.3s;border:0;
+}
+#remindme .btn:hover {background:var(--dark);transform:translateY(-4px)}
+#remindme .btn.secondary {background:var(--coral)}
+#remindme .hero {
+ display:grid;grid-template-columns:1fr 1fr;align-items:center;
+ gap:35px;min-height:520px;
+ background:radial-gradient(circle at 85% 30%,#e5eddf,transparent 40%);
+}
+#remindme .hero p {max-width:490px}
+#remindme .hero-image {
+ min-height:350px;border-radius:28px;
+ background:linear-gradient(135deg,#e8e5d8,#d4e1d5);
+ display:flex;align-items:center;justify-content:center;
+ padding:15px;perspective:1000px;
+}
+#remindme .photo {
+ width:100%;height:100%;min-height:300px;
+ border:2px dashed #9aafa0;border-radius:20px;
+ display:flex;align-items:center;justify-content:center;
+ text-align:center;padding:20px;color:#71877b;
+ background:rgba(255,255,255,.35);
+}
+#remindme .tilt {
+ width:100%;transform-style:preserve-3d;
+ transition:transform .25s ease;
+}
+#remindme .hero-image .photo {min-height:340px}
+#remindme .center {text-align:center}
+#remindme .features {
+ display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+#remindme .feature {
+ background:white;border-radius:20px;padding:18px;
+ box-shadow:0 8px 25px #315c4d12;
+ transition:.3s;
+}
+#remindme .feature:hover {transform:translateY(-7px)}
+#remindme .feature .photo {min-height:150px}
+#remindme .feature h3 {color:var(--teal);margin-bottom:5px}
+#remindme .feature p {font-size:14px;margin-top:5px}
+#remindme .about {
+ display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;
+ background:#e9eee3;
+}
+#remindme .about .photo {min-height:280px}
+#remindme .steps {
+ display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+#remindme .step {
+ background:white;border-radius:18px;padding:25px;text-align:center;
+}
+#remindme .number {
+ width:43px;height:43px;border-radius:50%;background:var(--coral);
+ color:white;display:grid;place-items:center;margin:0 auto 12px;
+ font-weight:700;font-size:19px;
+}
+#remindme .gallery {
+ display:grid;grid-template-columns:repeat(3,1fr);gap:15px;
+}
+#remindme .gallery .photo {min-height:190px}
+#remindme .cta {
+ text-align:center;background:var(--teal);color:white;
+ border-radius:25px;margin:35px 7%;padding:50px 20px;
+}
+#remindme .cta h2 {color:white}
+#remindme .cta p {max-width:600px;margin:10px auto 25px}
+#remindme .cta .btn {background:var(--coral)}
+#remindme footer {
+ text-align:center;padding:30px 15px;background:#e9eee3;font-size:13px;
+}
+#remindme .tag {color:var(--coral);font-weight:600}
+#remindme .reveal {animation:appear .8s ease both}
+@keyframes appear {
+ from {opacity:0;transform:translateY(20px)}
+ to {opacity:1;transform:translateY(0)}
+}
+@media(max-width:700px) {
+ #remindme section {padding:45px 6%}
+ #remindme .hero,#remindme .about {grid-template-columns:1fr}
+ #remindme .features {grid-template-columns:1fr 1fr}
+ #remindme .steps {grid-template-columns:1fr}
+ #remindme .gallery {grid-template-columns:1fr 1fr}
+}
+@media(max-width:430px) {
+ #remindme .features {grid-template-columns:1fr}
+}
+</style>
+
+<!-- PORTADA -->
+<section class="hero">
+ <div class="reveal">
+  <div class="eyebrow">Bienvenido a ReMindMe</div>
+  <h1>Recordar también es sentirse en casa.</h1>
+  <p>Un espacio creado para mantener presentes los momentos, las personas y las actividades que hacen especial cada día.</p>
+  <a class="btn" href="#producto">Conoce nuestro producto ↓</a>
+ </div>
+
+ <div class="hero-image">
+  <div class="tilt">
+   <div class="photo">
+    <!-- ESPACIO PARA FOTO PRINCIPAL DEL PRODUCTO -->
+    Agrega aquí tu fotografía principal
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- PRODUCTO -->
+<section id="producto">
+ <div class="center">
+  <div class="eyebrow">Conoce nuestro producto</div>
+  <h2>Todo lo importante, en un solo lugar.</h2>
+  <p class="sub">ReMindMe es una estación personalizada de apoyo para personas con dificultades de memoria, que reúne información útil para acompañarlas en su día a día.</p>
+ </div>
+
+ <div class="features">
+  <div class="feature">
+   <div class="photo">Foto del reloj digital</div>
+   <h3>Fecha y hora</h3>
+   <p>Ayuda a mantener la orientación en el tiempo.</p>
+  </div>
+  <div class="feature">
+   <div class="photo">Foto del módulo de rutina</div>
+   <h3>Rutinas diarias</h3>
+   <p>Organiza las actividades y horarios de cada día.</p>
+  </div>
+  <div class="feature">
+   <div class="photo">Foto del módulo de medicamentos</div>
+   <h3>Recordatorios</h3>
+   <p>Permite consultar los recordatorios importantes.</p>
+  </div>
+  <div class="feature">
+   <div class="photo">Foto del módulo familiar</div>
+   <h3>Familia</h3>
+   <p>Mantiene presentes los rostros y nombres de seres queridos.</p>
+  </div>
+  <div class="feature">
+   <div class="photo">Foto de información personal</div>
+   <h3>Información importante</h3>
+   <p>Reúne datos personales y contactos de emergencia.</p>
+  </div>
+  <div class="feature">
+   <div class="photo">Foto del módulo de actividades</div>
+   <h3>Actividades y gustos</h3>
+   <p>Incluye pasatiempos y actividades favoritas.</p>
+  </div>
+ </div>
+</section>
+
+<!-- PRESENTACIÓN -->
+<section class="about">
+ <div>
+  <div class="eyebrow">Diseñado para cada persona</div>
+  <h2 style="text-align:left">Cada historia es única.</h2>
+  <p>Por eso, cada ReMindMe se personaliza con fotografías, nombres, rutinas e información seleccionada por la familia.</p>
+  <p>Su diseño busca integrarse al hogar y mantener todo lo importante en un lugar visible y accesible.</p>
+ </div>
+ <div class="photo">Foto del tablero completo o vista 3D</div>
+</section>
+
+<!-- PERSONALIZACIÓN -->
+<section>
+ <div class="center">
+  <div class="eyebrow">Así de fácil</div>
+  <h2>Tu ReMindMe, a tu manera.</h2>
+  <p class="sub">Creamos cada tablero de acuerdo con las necesidades de la persona.</p>
+ </div>
+ <div class="steps">
+  <div class="step">
+   <div class="number">1</div>
+   <h3>Elige tus módulos</h3>
+   <p>Selecciona la información que quieres incluir.</p>
+  </div>
+  <div class="step">
+   <div class="number">2</div>
+   <h3>Comparte tus datos</h3>
+   <p>Envíanos fotografías, nombres y rutinas.</p>
+  </div>
+  <div class="step">
+   <div class="number">3</div>
+   <h3>¡Lo hacemos realidad!</h3>
+   <p>Preparamos tu tablero personalizado.</p>
+  </div>
+ </div>
+</section>
+
+<!-- GALERÍA -->
+<section style="background:#e9eee3">
+ <div class="center">
+  <div class="eyebrow">Conoce los detalles</div>
+  <h2>ReMindMe desde todos sus ángulos.</h2>
+  <p class="sub">Descubre el diseño, los materiales y los detalles de nuestro producto.</p>
+ </div>
+ <div class="gallery">
+  <div class="photo">Foto frontal</div>
+  <div class="photo">Foto lateral</div>
+  <div class="photo">Foto de los materiales</div>
+  <div class="photo">Foto de los módulos</div>
+  <div class="photo">Foto de los detalles</div>
+  <div class="photo">Foto en el hogar</div>
+ </div>
+</section>
+
+<!-- LLAMADO A LA ACCIÓN -->
+<div class="cta">
+ <h2>¡Crea tu propio ReMindMe!</h2>
+ <p>Cuéntanos qué es importante para tu familia y diseñemos juntos un espacio para recordarlo.</p>
+ <a class="btn" href="#contacto">Personaliza tu ReMindMe</a>
+</div>
+
+<!-- CONTACTO -->
+<section id="contacto" class="center">
+ <div class="eyebrow">Estamos para ayudarte</div>
+ <h2>¿Tienes alguna pregunta?</h2>
+ <p class="sub">Nos encantará ayudarte a conocer más sobre ReMindMe y acompañarte durante tu pedido.</p>
+ <a class="btn" href="https://wa.me/TUNUMERODEWHATSAPP">Contáctanos por WhatsApp</a>
+</section>
+
+<footer>
+ <strong>ReMindMe</strong>
+ <p>Recordar también es sentirse en casa.</p>
+ <span class="tag">Hecho con cariño para acompañar cada día. ♡</span>
+</footer>
+</div>
+
+<script>
+document.querySelectorAll('#remindme .tilt').forEach(el=>{
+ const parent=el.parentElement;
+ parent.addEventListener('mousemove',e=>{
+  const r=parent.getBoundingClientRect();
+  const x=(e.clientX-r.left)/r.width;
+  const y=(e.clientY-r.top)/r.height;
+  el.style.transform=`rotateY(${(x-.5)*15}deg) rotateX(${(.5-y)*12}deg)`;
+ });
+ parent.addEventListener('mouseleave',()=>{
+  el.style.transform='rotateY(0) rotateX(0)';
+ });
+});
+</script>
+</div>
